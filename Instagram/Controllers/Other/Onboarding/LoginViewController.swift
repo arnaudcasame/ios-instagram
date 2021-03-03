@@ -190,7 +190,34 @@ class LoginViewController: UIViewController {
             return
         }
         print("Login Button Tapped: \(usernameEmail)")
+        var email: String?
+        var username: String?
         
+        if usernameEmail.contains("@"), usernameEmail.contains("."){
+            // EMAIL
+            email = usernameEmail
+        }else{
+            // Username
+            username = usernameEmail
+        }
+        AuthManager.shared.loginUser(username: username, email: email, password: password) { success in
+            DispatchQueue.main.async {
+                if success {
+                    self.dismiss(animated: true, completion: nil)
+                }
+                else{
+                    let alert = UIAlertController(
+                        title: "Log In Error",
+                        message: "We were unable to log you in",
+                        preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(
+                                        title: "Dismiss",
+                                        style: .cancel,
+                                        handler: nil))
+                    self.present(alert, animated: true)
+                }
+            }
+        }
     }
     
     @objc func didTapTermsButton(){
@@ -211,7 +238,8 @@ class LoginViewController: UIViewController {
     
     @objc func didTapCreateAccountButton(){
         let vc = RegistrationViewController()
-        present(vc, animated: true)
+        vc.title = "Create Account"
+        present(UINavigationController(rootViewController: vc), animated: true)
     }
     
     
