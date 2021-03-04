@@ -64,7 +64,7 @@ final class SettingsViewController: UIViewController {
                             self.tabBarController?.selectedIndex = 0
                         })
                     }else{
-                        
+                        fatalError("Could not log out user")
                     }
                 }
             })
