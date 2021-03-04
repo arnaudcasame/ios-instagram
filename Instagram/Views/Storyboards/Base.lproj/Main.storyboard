@@ -14,7 +14,7 @@
             <objects>
                 <navigationController id="kw2-zi-C0A" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="plus" catalog="system" id="jeB-FH-9Ad"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QRv-VN-bLv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="QRv-VN-bLv">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -31,7 +31,7 @@
             <objects>
                 <navigationController id="PdY-7G-49q" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="house" catalog="system" id="lQw-Jy-8wF"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="U6K-0X-VB7">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="U6K-0X-VB7">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -48,7 +48,7 @@
             <objects>
                 <viewController id="VQZ-69-9aL" customClass="HomeViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cID-un-aop">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="fTV-jX-Zju"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -64,7 +64,7 @@
             <objects>
                 <viewController id="i3s-ca-UuF" customClass="ExploreViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="R7v-L8-noT">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="FzJ-9i-Sqo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -80,7 +80,7 @@
             <objects>
                 <viewController id="V49-8J-iGM" customClass="CameraViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iXx-ic-19E">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="E0C-l1-Dsq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -96,7 +96,7 @@
             <objects>
                 <viewController id="zym-Ny-0cw" customClass="NotificationsViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GH8-3s-QZ1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="qsQ-JM-FiL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -112,7 +112,7 @@
             <objects>
                 <viewController id="FAr-Zk-5s4" customClass="ProfileViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mCY-Lm-Dav">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="QWM-TK-ML2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -128,7 +128,7 @@
             <objects>
                 <navigationController id="6UQ-Ka-E5Y" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="magnifyingglass" catalog="system" id="YQ3-9J-PxZ"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mIX-kw-njR">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="mIX-kw-njR">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -145,7 +145,7 @@
             <objects>
                 <navigationController id="in1-qC-Wrk" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="heart" catalog="system" id="vy4-cE-Tmr"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wsT-cg-1GE">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="wsT-cg-1GE">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -162,7 +162,7 @@
             <objects>
                 <navigationController id="1Dr-WQ-nkB" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="person" catalog="system" id="jN4-0Y-ADF"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2fq-Xu-Ckk">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="2fq-Xu-Ckk">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -178,7 +178,7 @@
         <scene sceneID="pze-dE-Mgh">
             <objects>
                 <tabBarController id="u4M-zH-bt7" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ad8-QK-zwT">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Ad8-QK-zwT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
