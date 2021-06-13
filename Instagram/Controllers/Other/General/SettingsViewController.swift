@@ -45,7 +45,7 @@ final class SettingsViewController: UIViewController {
             SettingCellModel(title: "Invite Friends"){ [weak self] in
                 self?.didTapInviteFriends()
             },
-            SettingCellModel(title: "save Original Posts"){ [weak self] in
+            SettingCellModel(title: "Save Original Posts"){ [weak self] in
                 self?.didTapSaveOriginalPosts()
             }
         ])
@@ -75,6 +75,7 @@ final class SettingsViewController: UIViewController {
         let vc = EditProfileViewController()
         vc.title = "Edit Profile"
         let navVC = UINavigationController(rootViewController: vc)
+        navVC.modalPresentationStyle = .fullScreen
         present(navVC, animated: true)
     }
     
