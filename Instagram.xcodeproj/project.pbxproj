@@ -42,6 +42,7 @@
 		F1D514BA25E60DD500B92556 /* SearchResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D514B925E60DD500B92556 /* SearchResultsViewController.swift */; };
 		F1D514BD25E60DF100B92556 /* PostEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D514BC25E60DF100B92556 /* PostEditorViewController.swift */; };
 		F1D514C025E60E1400B92556 /* PublishPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D514BF25E60E1400B92556 /* PublishPostViewController.swift */; };
+		F1FD78962A2B018D00A1C648 /* UserFollowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FD78952A2B018D00A1C648 /* UserFollowTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +85,7 @@
 		F1D514B925E60DD500B92556 /* SearchResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsViewController.swift; sourceTree = "<group>"; };
 		F1D514BC25E60DF100B92556 /* PostEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEditorViewController.swift; sourceTree = "<group>"; };
 		F1D514BF25E60E1400B92556 /* PublishPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishPostViewController.swift; sourceTree = "<group>"; };
+		F1FD78952A2B018D00A1C648 /* UserFollowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFollowTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				F112FB6125F33F2000D4B096 /* Home Feed */,
 				F112FB8025FCA10400D4B096 /* FormTableViewCell.swift */,
 				F112FB8425FCAF7B00D4B096 /* PhotoCollectionViewCell.swift */,
+				F1FD78952A2B018D00A1C648 /* UserFollowTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				F112FB6325F33F4B00D4B096 /* IGFeedPostHeaderTableViewCell.swift in Sources */,
 				F1D514BD25E60DF100B92556 /* PostEditorViewController.swift in Sources */,
 				F112FB4125E628FD00D4B096 /* StorageManager.swift in Sources */,
+				F1FD78962A2B018D00A1C648 /* UserFollowTableViewCell.swift in Sources */,
 				F112FB8125FCA10400D4B096 /* FormTableViewCell.swift in Sources */,
 				F1D514A825E60D1F00B92556 /* RegistrationViewController.swift in Sources */,
 				F112FB8C25FCB02700D4B096 /* ProfileTabsCollectionReusableView.swift in Sources */,
