@@ -87,9 +87,9 @@ final class SettingsViewController: UIViewController {
         var urlString: String
         switch type {
             case .terms:
-                urlString = "https://soiread.com"
+                urlString = "https://soiread.com/#/terms"
             case .privacy:
-                urlString = "https://soiread.com"
+                urlString = "https://soiread.com/#/privacy"
             case .help:
                 urlString = "https://soiread.com"
         }

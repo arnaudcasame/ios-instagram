@@ -203,6 +203,7 @@ class LoginViewController: UIViewController {
         AuthManager.shared.loginUser(username: username, email: email, password: password) { success in
             DispatchQueue.main.async {
                 if success {
+                    print("Logged In Success!")
                     self.dismiss(animated: true, completion: nil)
                 }
                 else{
