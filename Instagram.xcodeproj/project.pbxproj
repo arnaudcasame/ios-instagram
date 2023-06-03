@@ -43,6 +43,9 @@
 		F1D514BD25E60DF100B92556 /* PostEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D514BC25E60DF100B92556 /* PostEditorViewController.swift */; };
 		F1D514C025E60E1400B92556 /* PublishPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D514BF25E60E1400B92556 /* PublishPostViewController.swift */; };
 		F1FD78962A2B018D00A1C648 /* UserFollowTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FD78952A2B018D00A1C648 /* UserFollowTableViewCell.swift */; };
+		F1FD78982A2B6E2200A1C648 /* NoNotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FD78972A2B6E2200A1C648 /* NoNotificationsView.swift */; };
+		F1FD789B2A2B745900A1C648 /* NotificationFollowEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FD789A2A2B745900A1C648 /* NotificationFollowEventTableViewCell.swift */; };
+		F1FD789D2A2B748000A1C648 /* NotificationsLikeEventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FD789C2A2B748000A1C648 /* NotificationsLikeEventTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +89,9 @@
 		F1D514BC25E60DF100B92556 /* PostEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostEditorViewController.swift; sourceTree = "<group>"; };
 		F1D514BF25E60E1400B92556 /* PublishPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublishPostViewController.swift; sourceTree = "<group>"; };
 		F1FD78952A2B018D00A1C648 /* UserFollowTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFollowTableViewCell.swift; sourceTree = "<group>"; };
+		F1FD78972A2B6E2200A1C648 /* NoNotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoNotificationsView.swift; sourceTree = "<group>"; };
+		F1FD789A2A2B745900A1C648 /* NotificationFollowEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationFollowEventTableViewCell.swift; sourceTree = "<group>"; };
+		F1FD789C2A2B748000A1C648 /* NotificationsLikeEventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsLikeEventTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +141,7 @@
 		F112FB5D25F33C8F00D4B096 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				F1FD78992A2B742200A1C648 /* Notifications */,
 				F112FB6125F33F2000D4B096 /* Home Feed */,
 				F112FB8025FCA10400D4B096 /* FormTableViewCell.swift */,
 				F112FB8425FCAF7B00D4B096 /* PhotoCollectionViewCell.swift */,
@@ -209,6 +216,7 @@
 				F112FB5D25F33C8F00D4B096 /* Cells */,
 				F1D5149225E60AF100B92556 /* Storyboards */,
 				F1D5148225E60A2800B92556 /* Assets.xcassets */,
+				F1FD78972A2B6E2200A1C648 /* NoNotificationsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -272,6 +280,15 @@
 				F1D514A725E60D1F00B92556 /* RegistrationViewController.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		F1FD78992A2B742200A1C648 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				F1FD789A2A2B745900A1C648 /* NotificationFollowEventTableViewCell.swift */,
+				F1FD789C2A2B748000A1C648 /* NotificationsLikeEventTableViewCell.swift */,
+			);
+			path = Notifications;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,11 +408,14 @@
 			files = (
 				F1D514AE25E60D7D00B92556 /* EditProfileViewController.swift in Sources */,
 				F1D5149525E60C5E00B92556 /* ExploreViewController.swift in Sources */,
+				F1FD789D2A2B748000A1C648 /* NotificationsLikeEventTableViewCell.swift in Sources */,
 				F1D514C025E60E1400B92556 /* PublishPostViewController.swift in Sources */,
 				F1D5149825E60C7100B92556 /* CameraViewController.swift in Sources */,
 				F1D5147E25E60A2600B92556 /* HomeViewController.swift in Sources */,
 				F1D514BA25E60DD500B92556 /* SearchResultsViewController.swift in Sources */,
+				F1FD78982A2B6E2200A1C648 /* NoNotificationsView.swift in Sources */,
 				F112FB6325F33F4B00D4B096 /* IGFeedPostHeaderTableViewCell.swift in Sources */,
+				F1FD789B2A2B745900A1C648 /* NotificationFollowEventTableViewCell.swift in Sources */,
 				F1D514BD25E60DF100B92556 /* PostEditorViewController.swift in Sources */,
 				F112FB4125E628FD00D4B096 /* StorageManager.swift in Sources */,
 				F1FD78962A2B018D00A1C648 /* UserFollowTableViewCell.swift in Sources */,
