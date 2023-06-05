@@ -7,12 +7,26 @@
 
 import UIKit
 
+enum UserNotificationType {
+    case like(post: UserPost)
+    case follow(state: FollowState)
+}
+
+struct UserNotification {
+    let type: UserNotificationType
+    let text: String
+    let user: User
+}
+
 class NotificationsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    private var models = [UserNotification]()
+    
     private var tableView: UITableView = {
         let tableView = UITableView()
-        tableView.isHidden = true
-        tableView.register(NotificationsLikeEventTableViewCell.self,
-                           forCellReuseIdentifier: NotificationsLikeEventTableViewCell.identifier)
+//        tableView.isHidden = true
+        tableView.register(NotificationLikeEventTableViewCell.self,
+                           forCellReuseIdentifier: NotificationLikeEventTableViewCell.identifier)
         tableView.register(NotificationFollowEventTableViewCell.self,
                            forCellReuseIdentifier: NotificationFollowEventTableViewCell.identifier)
        return tableView
@@ -31,9 +45,10 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        fetchNotifications()
         navigationItem.title = "Notifications"
         view.backgroundColor = .systemBackground
-        view.addSubview(spinner)
+//        view.addSubview(spinner)
 //        spinner.startAnimating()
         view.addSubview(tableView)
         tableView.delegate = self
@@ -55,11 +70,71 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return models.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        return cell
+        let model = models[indexPath.row]
+        switch model.type {
+            case .like(_):
+                // like cell
+                let cell = tableView.dequeueReusableCell(withIdentifier: NotificationLikeEventTableViewCell.identifier,
+                                                         for: indexPath) as! NotificationLikeEventTableViewCell
+                cell.configure(with: model)
+                cell.delegate = self
+                return cell
+            case .follow:
+                // follow cell
+                let cell = tableView.dequeueReusableCell(withIdentifier: NotificationFollowEventTableViewCell.identifier,
+                                                         for: indexPath) as! NotificationFollowEventTableViewCell
+                cell.configure(with: model)
+                cell.delegate = self
+                return cell
+        }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 52
+    }
+    
+    private func fetchNotifications(){
+        for x in 0...50 {
+            let post = UserPost(postType: .photo,
+                                thumbnailImage: URL(string: "https://firebasestorage.googleapis.com/v0/b/debtors2-0.appspot.com/o/bequeen%2Fimaan-hammam.jpeg?alt=media&token=16fd3c5f-4891-455a-ab2f-d237fc082a3c")!,
+                                postURL: URL(string: "https://www.google.com")!,
+                                caption: "This is photo post",
+                                likeCount: [],
+                                comments: [],
+                                createdDate: Date(),
+                                taggedUser: [])
+            let model = UserNotification(type: x % 2 == 0 ? .like(post: post) : .follow(state: .following),
+                                         text: "Hello World",
+                                         user: User(username: "joe",
+                                                    bio: "",
+                                                    name: (first: "", last: ""),
+                                                    birthDate: Date(),
+                                                    profilePhoto: URL(string: "https://firebasestorage.googleapis.com/v0/b/debtors2-0.appspot.com/o/authors%2Fprofile-placeholder.png?alt=media&token=23e2336b-c05c-4151-8670-b8a930fa4a29")!,
+                                                    gender: .male,
+                                                    counts: UserCount(followers: 1,
+                                                                      following: 5,
+                                                                      posts: 25),
+                                                    joinDate: Date()))
+            models.append(model)
+        }
+    }
+}
+
+
+extension NotificationsViewController: NotificationLikeEventTableViewCellDelegate {
+    func didTapViewPostButton(model: UserNotification) {
+        // Open the related post tapped by user
+    }
+}
+
+extension NotificationsViewController: NotificationFollowEventTableViewCellDelegate {
+    func didTapFollowUnfollowButton(model: UserNotification) {
+        // Perform database update
+        print(model.type)
     }
 }
