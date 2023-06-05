@@ -100,6 +100,16 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
     
     private func fetchNotifications(){
         for x in 0...50 {
+            let user = User(username: "joe",
+                            bio: "",
+                            name: (first: "", last: ""),
+                            birthDate: Date(),
+                            profilePhoto: URL(string: "https://firebasestorage.googleapis.com/v0/b/debtors2-0.appspot.com/o/authors%2Fprofile-placeholder.png?alt=media&token=23e2336b-c05c-4151-8670-b8a930fa4a29")!,
+                            gender: .male,
+                            counts: UserCount(followers: 1,
+                                              following: 5,
+                                              posts: 25),
+                            joinDate: Date())
             let post = UserPost(postType: .photo,
                                 thumbnailImage: URL(string: "https://firebasestorage.googleapis.com/v0/b/debtors2-0.appspot.com/o/bequeen%2Fimaan-hammam.jpeg?alt=media&token=16fd3c5f-4891-455a-ab2f-d237fc082a3c")!,
                                 postURL: URL(string: "https://www.google.com")!,
@@ -107,19 +117,11 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
                                 likeCount: [],
                                 comments: [],
                                 createdDate: Date(),
-                                taggedUser: [])
+                                taggedUser: [],
+                                owner: user)
             let model = UserNotification(type: x % 2 == 0 ? .like(post: post) : .follow(state: .following),
                                          text: "Hello World",
-                                         user: User(username: "joe",
-                                                    bio: "",
-                                                    name: (first: "", last: ""),
-                                                    birthDate: Date(),
-                                                    profilePhoto: URL(string: "https://firebasestorage.googleapis.com/v0/b/debtors2-0.appspot.com/o/authors%2Fprofile-placeholder.png?alt=media&token=23e2336b-c05c-4151-8670-b8a930fa4a29")!,
-                                                    gender: .male,
-                                                    counts: UserCount(followers: 1,
-                                                                      following: 5,
-                                                                      posts: 25),
-                                                    joinDate: Date()))
+                                         user: user)
             models.append(model)
         }
     }
@@ -129,6 +131,15 @@ class NotificationsViewController: UIViewController, UITableViewDelegate, UITabl
 extension NotificationsViewController: NotificationLikeEventTableViewCellDelegate {
     func didTapViewPostButton(model: UserNotification) {
         // Open the related post tapped by user
+        switch model.type {
+        case .like(let post):
+            let vc = PostViewController(model: post)
+            vc.title = post.postType.rawValue
+            vc.navigationItem.largeTitleDisplayMode = .never
+            navigationController?.pushViewController(vc, animated: true)
+        case .follow(_):
+            fatalError("Dev Issue: Should never get called!")
+        }
     }
 }
 

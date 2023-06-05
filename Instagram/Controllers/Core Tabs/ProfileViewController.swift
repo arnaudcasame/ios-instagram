@@ -90,8 +90,8 @@ extension ProfileViewController: UICollectionViewDelegate, UICollectionViewDataS
         collectionView.deselectItem(at: indexPath, animated: true)
         
         // get the model and open Post controller
-//        let model = userPosts[indexPath.row]
-        let vc = PostViewController(model: nil)
+        let model = userPosts[indexPath.row]
+        let vc = PostViewController(model: model)
         vc.title = "Post"
         vc.navigationItem.largeTitleDisplayMode = .never
         navigationController?.pushViewController(vc, animated: true)
