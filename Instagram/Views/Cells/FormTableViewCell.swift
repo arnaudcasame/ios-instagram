@@ -52,7 +52,10 @@ class FormTableViewCell: UITableViewCell, UITextFieldDelegate {
         super.layoutSubviews()
         
         // assign frames
-        formLabel.frame = CGRect(x: 5, y: 0, width: contentView.width/3, height: contentView.height)
+        formLabel.frame = CGRect(x: 5,
+                                 y: 0,
+                                 width: contentView.width / 3,
+                                 height: contentView.height)
         textField.frame = CGRect(x: formLabel.right + 5,
                                  y: 0,
                                  width: contentView.width - 10 - formLabel.width,
