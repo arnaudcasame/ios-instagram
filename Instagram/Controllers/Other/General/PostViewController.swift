@@ -33,7 +33,7 @@ class PostViewController: UIViewController {
         return tableView
     }()
     
-    init(model: UserPost){
+    init(model: UserPost?){
         self.model = model
         super.init(nibName: nil, bundle: nil)
         configureModels()

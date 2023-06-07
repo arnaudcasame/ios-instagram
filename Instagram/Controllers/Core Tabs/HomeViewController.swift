@@ -40,7 +40,7 @@ class HomeViewController: UIViewController {
         for _ in 0...5 {
             comments.append(PostComment(identifier: "Identity", username: "Joe", text: "This is the comment text", createdDate: Date(), likes: [CommentLike(username: "Junior", commentIdentifier: "Identifier")]))
         }
-        let user = User(username: "joe",
+        let user = User(username: "@joe",
                         bio: "",
                         name: (first: "", last: ""),
                         birthDate: Date(),

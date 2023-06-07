@@ -20,22 +20,28 @@ class IGFeedPostActionsTableViewCell: UITableViewCell {
     
     private let likeButton: UIButton = {
         let btn = UIButton()
+        let config = UIImage.SymbolConfiguration(pointSize: 30, weight: .thin)
+        let image = UIImage(systemName: "heart", withConfiguration: config)
+        btn.setImage(image, for: .normal)
         btn.tintColor = .label
-        btn.setImage(UIImage(systemName: "heart"), for: .normal)
         return btn
     }()
     
     private let commentButton: UIButton = {
         let btn = UIButton()
         btn.tintColor = .label
-        btn.setImage(UIImage(systemName: "message"), for: .normal)
+        let config = UIImage.SymbolConfiguration(pointSize: 30, weight: .thin)
+        let image = UIImage(systemName: "message", withConfiguration: config)
+        btn.setImage(image, for: .normal)
         return btn
     }()
     
     private let sendButton: UIButton = {
         let btn = UIButton()
         btn.tintColor = .label
-        btn.setImage(UIImage(systemName: "paperplane"), for: .normal)
+        let config = UIImage.SymbolConfiguration(pointSize: 30, weight: .thin)
+        let image = UIImage(systemName: "paperplane", withConfiguration: config)
+        btn.setImage(image, for: .normal)
         return btn
     }()
 
